@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "mp2",
+  "name": "MP2: Top TMDB Movies",
   "icons": [
     {
       "src": "favicon.ico",
