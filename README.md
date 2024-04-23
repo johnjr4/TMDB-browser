@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# TMDB Browser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A minimalist way to view aggregate data for the top movies of all time according to TMDB. The visually pleasing interface gives you the essential data in an easy to digest form, while highlighting the beauty of the accompanying art and promotional stills. Explore further with multiple sorting options and synopsis details. 
 
-## Available Scripts
+## Features
+- Gallery View:
 
-In the project directory, you can run:
+  The heart of the site. Explore the top 200 movies based on the votes of TMDB users in this dynamic, responsive gallery.
+  ![image](https://github.com/johnjr4/TMDB-browser/assets/92764125/88f3d36e-8bc0-47cb-80c9-1c0e43135368)
 
-### `npm start`
+  Find what you're looking for with several content filters.
+  ![image](https://github.com/johnjr4/TMDB-browser/assets/92764125/b8fdfaf9-a721-4a29-9df5-37710c6cd054)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- List View:
 
-### `npm test`
+   For a more methodical approach, use the list view to see the current score out of 10 on TMDB, and utilize various sorting options to explore further.
+  ![image](https://github.com/johnjr4/TMDB-browser/assets/92764125/c8df4067-03bd-4f0c-a0d1-ffd5dfcd3057)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    
+- Detail View
+    
+    Learn more about a movie that piques your interest with a detail view that shows the director and a synopsis along with a still from the film. Scroll through in ranked order with the navigation buttons.
+    ![image](https://github.com/johnjr4/TMDB-browser/assets/92764125/9972ebda-80cb-409b-8592-107dfd794ad9)
+    
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| 🖥️ | ⚙️ |
+| --- | --- |
+| Frontend | ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![React Route](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) |
+| Backend | ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) |
+| UI/UX Design | ![CSS](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) |
