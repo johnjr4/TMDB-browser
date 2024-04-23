@@ -5,22 +5,11 @@ import { Routes, Route, Link, Outlet} from 'react-router-dom';
 import FilteredMovies from './FilteredMovies';
 import FilteredGallery from './FilteredGallery';
 import MovieDetail from './MovieDetail';
-// import FilteredMovies from "./FilteredMovies";
 
-// Must append with "original/abc123.jpg" or "w500/abc123.jpg" or something
+// Must append with "original/abc123.jpg" or "w500/abc123.jpg"
 // const pre_poster_path = 'https://image.tmdb.org/t/p/'
 const NUM_PAGES = 10;
 const PAGE_SIZE = 20;
-
-// const options = {
-//   method: 'GET',
-//   url: 'https://api.themoviedb.org/3/movie/top_rated',
-//   params: {language: 'en-US', page: '1'},
-//   headers: {
-//     accept: 'application/json',
-//     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZTE4MGZlNzdkOTU1MWFhYjEyYzgyMDdiY2IwNzQ5NiIsInN1YiI6IjY1MmNjZThlNjYxMWI0MDBjNTBmNjRiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DCpgKfhEPgi_19YZ4SSW0g-f_VD6vncMo4tpJzYwG_k'
-//   }
-// };
 
 function pageOptions(page: number) {
   return {
@@ -29,17 +18,10 @@ function pageOptions(page: number) {
     params: {language: 'en-US', page: page.toString()},
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZTE4MGZlNzdkOTU1MWFhYjEyYzgyMDdiY2IwNzQ5NiIsInN1YiI6IjY1MmNjZThlNjYxMWI0MDBjNTBmNjRiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DCpgKfhEPgi_19YZ4SSW0g-f_VD6vncMo4tpJzYwG_k'  
+      Authorization: // API authentication key omitted 
     }
   };
 }
-
-// interface MovieList {
-//   "page": number,
-//   "results": Array<Movie>,
-//   "total_pages": number,
-//   "total_results": number
-// };
 
 interface Movie {
   "adult": boolean,
@@ -85,13 +67,6 @@ War             = 10752,
 Western         = 37,
 }
 
-// const errorList: MovieList = {
-//   page: -1,
-//   results: [],
-//   total_pages: -1,
-//   total_results: -1
-// };
-
 let cachedMovies: Array<RankedMovie>;
 
 function App() {
@@ -132,10 +107,6 @@ function List() {
   const [failed, setFailed] = useState<boolean>(false);
   const [query, setQuery] = useState<string>('');
   const [sort, setSort] = useState<string>('rating');
-
-  // console.log("Here's the list");
-  // console.log(`topMovies are`);
-  // console.log(topMovies)
 
   useEffect(() => {
     if (cachedMovies == null || cachedMovies.length !== NUM_PAGES * PAGE_SIZE) {
@@ -182,7 +153,6 @@ function List() {
     return <div>LOADING!</div>;
   }
 
-  // console.log(displayMovies);
   return(
     <div>
       {/* Welcome to list view. */}
@@ -214,7 +184,6 @@ function List() {
 
 // GALLERY PAGE
 function Gallery() {
-  // console.log("Gallery...");
   const [isLoading, setLoading] = useState<boolean>(true);
   const [displayMovies, setDisplayMovies] = useState<Array<RankedMovie>>([]);
   const [failed, setFailed] = useState<boolean>(false);
